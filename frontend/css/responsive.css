@@ -1,0 +1,231 @@
+/* ==========================================================================
+   VIGNESWARA SOFTWARE SOLUTIONS - RESPONSIVE STYLESHEET
+   Supports Desktop 1440px+, Tablets 1024px, 768px, Mobile iOS / Android 375px+
+   ========================================================================== */
+
+/* Large Desktop screens (1280px - 1440px+) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max-width: 1360px;
+  }
+}
+
+/* Medium Desktop & Landscape Tablets (992px - 1199px) */
+@media (max-width: 1199px) {
+  .tech-categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  :root {
+    --section-padding-y: 72px;
+  }
+
+  .nav-menu, 
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 440px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .solutions-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .solutions-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .solution-tab-btn {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .strip-pipeline {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .strip-pipeline::before {
+    display: none;
+  }
+
+  .pipeline-step {
+    flex: 0 0 calc(33.333% - 1.5rem);
+    min-width: 100px;
+  }
+}
+
+/* Mobile Devices (Under 767px) */
+@media (max-width: 767px) {
+  :root {
+    --section-padding-y: 56px;
+  }
+
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pipeline-step {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .modal-box {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Small mobile devices (Under 380px) */
+@media (max-width: 379px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .pipeline-step {
+    flex: 0 0 100%;
+  }
+}
+
+/* iOS Safe Area insets */
+@supports (padding: env(safe-area-inset-top)) {
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  .site-footer {
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+  }
+}
