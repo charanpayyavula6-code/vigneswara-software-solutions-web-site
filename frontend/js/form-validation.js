@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    // API Base URL (configurable)
-    const API_BASE = window.API_BASE_URL || 'http://localhost:8000/api';
+    // API Base URL (dynamic: local dev or production deployment)
+    const API_BASE = window.API_BASE_URL || (window.location.hostname === 'localhost' && window.location.port !== '8000' ? 'http://localhost:8000/api' : '/api');
 
     const payload = {
       full_name: inputs.name.value.trim(),
